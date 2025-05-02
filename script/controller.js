@@ -7,7 +7,8 @@
 
 
 
-// lag en skuff inni parentesen så du har et sted å lagre input
+// parameter er kun lokal i en egen skuff, da er whatisage sokken 
+// og userinput er skuffen er i gangen
 function writeAge(whatIsAge) {
 userInput = whatIsAge;
 }
@@ -15,15 +16,16 @@ userInput = whatIsAge;
 function ageBtn() {
     // lag en if som spør hvis userinput er userunder3 så er billett gratis
     // for(let i = 0; i < userUnder3; i++)
+    console.log(userInput);
     if(userInput <= userUnder3 ) {
     message = "Gratis billett";
     console.log('Gratis billett')
 
-    }else if(userInput > user3To12) {
+    }else if(userInput > userUnder3 && userInput < userOver12) {
     message = "Billett koster 50kr";
     console.log('Billett 50kr')
-
-    }else if(userInput > userOver12) {
+    //Hvorfor kjører ikke denne
+    }else if(userInput >= userOver12) {
     message = "Billett koser 100kr";
     console.log('Billett 100kr')
 
